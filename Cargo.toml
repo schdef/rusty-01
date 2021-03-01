@@ -1,0 +1,15 @@
+[package]
+name = "rusty-01"
+version = "0.1.0"
+authors = ["Stefan Heintz <stefan.heintz@bmw.de>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = "0.4.7"
+rocket_codegen = "0.4.7"
+
+[[bin]]
+name = "rusty-01"
+path = "src/main.rs"
