@@ -11,7 +11,7 @@ RUN rm src/*.rs
 ADD . ./
 
 #RUN rm ./target/release/deps/rust_docker_web*
-RUN cargo build --release
+#RUN cargo build --release
 
 
 FROM debian:buster-slim

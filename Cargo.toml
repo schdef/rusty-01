@@ -1,5 +1,5 @@
 [package]
-name = "rusty-01"
+name = "vaulty"
 version = "0.1.0"
 authors = ["Stefan Heintz <stefan.heintz@bmw.de>"]
 edition = "2018"
@@ -9,7 +9,20 @@ edition = "2018"
 [dependencies]
 rocket = "0.4.7"
 rocket_codegen = "0.4.7"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_derive = "1.0"
+diesel = { version = "1.4.4", features = ["postgres", "chrono", "uuid"] }
+dotenv = "0.15.0"
+chrono = "0.4"
+chrono-tz = "0.5"
+uuid = "0.6.5"
+
+[dependencies.rocket_contrib]
+version = "0.4.7"
+default-features = false
+features = ["json"]
 
 [[bin]]
-name = "rusty-01"
+name = "vaulty"
 path = "src/main.rs"

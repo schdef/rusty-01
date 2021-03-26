@@ -5,11 +5,18 @@
 
 #[macro_use]
 extern crate rocket;
+#[macro_use]
+extern crate serde_derive;
+extern crate rocket_contrib;
+extern crate serde_json;
 
+use crate::db_service::*;
 use crate::routes::*;
-
+mod db_service;
 mod routes;
 
 fn main() {
-    rocket::ignite().mount("/", routes![hello2]).launch();
+    rocket::ignite()
+        .mount("/", routes![get_entity, create_entity])
+        .launch();
 }
