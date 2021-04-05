@@ -5,12 +5,10 @@
 
 #[macro_use]
 extern crate rocket;
-#[macro_use]
-extern crate serde_derive;
 extern crate rocket_contrib;
+extern crate serde_derive;
 extern crate serde_json;
 
-use crate::db_service::*;
 use crate::routes::*;
 mod db_service;
 mod routes;

@@ -1,6 +1,6 @@
 table! {
     vaultstore (id) {
-        id -> Nullable<Int4>,
+        id -> Nullable<Integer>,
         created_timestamp -> Nullable<Timestamp>,
         context -> Nullable<Varchar>,
         entity_key -> Nullable<Varchar>,
