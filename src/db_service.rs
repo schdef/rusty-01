@@ -37,5 +37,7 @@ pub fn create_entity_in_db(
     );
     diesel::insert_into(vaultstore)
         .values(new_entity)
-        .execute(&connection);
+        .execute(&connection)
+        .map_err(|err| println!("{:?}", err))
+        .ok();
 }

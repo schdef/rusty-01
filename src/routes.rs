@@ -1,7 +1,3 @@
-//#[macro_use]
-//extern crate rocket_contrib;
-// use rocket::request::Form;
-// use rocket::request::FromFormValue;
 use rocket_contrib::json::Json;
 
 extern crate diesel;
@@ -9,7 +5,6 @@ extern crate diesel;
 extern crate vaulty;
 use self::vaulty::*;
 
-// use self::diesel::prelude::*;
 use self::models::*;
 use crate::db_service::*;
 
